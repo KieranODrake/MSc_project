@@ -29,7 +29,7 @@ PDB_code_list, TCR_pMHC1_list, TCR_pMHC2_list = contact_functions.manual_TCR_pMH
 ##################################################################################
 # Download PDB files for TCR-pMHC complexes
 ##################################################################################
-PDB_file_dir = home_path + "PDB_files/"
+PDB_file_dir = home_path + "\PDB_files"
 PDB_files_confirm = contact_functions.get_PDB_files(PDB_code_list,home_path,PDB_file_dir)
 print(PDB_files_confirm)
 
@@ -204,7 +204,7 @@ print(PDBsum_files_confirm)
 # Analyse TCR-pMHC contact files from PDB sum
 ################################################
 ## If need to manually set a particular PDBsum file directory
-#PDBsum_directory = input("Enter PDBsume directory: ")
+PDBsum_directory = input("Enter PDBsume directory: ")
 
 # Create dataframe of information produced by extraction from PDBsum information and analysis
 contact_df = contact_functions.analyse_PDBsum(PDB_code_list,home_path,complex_dict,PDBsum_directory)
